@@ -2,4 +2,3 @@
 Console.WriteLine("Hello, World!");
 Console.ReadLine();
 Console.WriteLine("welcome to c# it is intresting");
-Console.WriteLine("welcome to c# it is intresting");
