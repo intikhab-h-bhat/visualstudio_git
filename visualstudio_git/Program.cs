@@ -1,5 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Console.ReadLine();
-Console.WriteLine("welcome to c# it is intresting");
-Console.WriteLine("New branch");
+﻿using visualstudio_git;
+
+
+
+ExtractFirstNameLastName firstNameLastName = new ExtractFirstNameLastName();
+
+firstNameLastName.FullName = "Intikhab Hussain";
+
+firstNameLastName.FirstName = firstNameLastName.FullName.Substring(0, firstNameLastName.FullName.IndexOf(" "));
+firstNameLastName.LastName = firstNameLastName.FullName.Substring(firstNameLastName.FullName.IndexOf(" "));
+
+Console.WriteLine($"First Name: {firstNameLastName.getFirstNameLastName()}");
+Console.WriteLine($"Last Name: {firstNameLastName.LastName}");
+
