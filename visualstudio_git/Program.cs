@@ -1,6 +1,11 @@
 ﻿using visualstudio_git;
 
 
+var person= new Person("intikhab Hussain Bhat",43);
+person.Introduce();
+
+
+
 
 ExtractFirstNameLastName firstNameLastName = new ExtractFirstNameLastName();
 
