@@ -10,20 +10,22 @@ namespace visualstudio_git
     {
         private string _name;
         private int _age;
-        //private string _address;
+        private string _address;
         //private string _city;
 
-        public Person(string name,int age)
+        public Person(string name,int age,string address)
         {
             this._name = name;
             this._age = age;
+            this._address = address;
+
 
         }
 
         public void Introduce()
         {
 
-            Console.WriteLine($"Hello my name is {_name} and my age is {_age}");
+            Console.WriteLine($"Hello my name is {_name} and my age is {_age} and my address is {_address}");
         }
 
      
