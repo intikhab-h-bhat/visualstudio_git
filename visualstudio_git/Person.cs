@@ -14,20 +14,13 @@ namespace visualstudio_git
         private string _address;
         //private string _city;
 
-        public Person(string name,int age,string address)
+        public Person(string name, int age, string address)
         {
             this._name = name;
             this._age = age;
             this._address = address;
-
-
-        //private string _address;
-        //private string _city;
-
-        public Person(string name,int age)
-        {
-            this._name = name;
-            this._age = age;
+            //private string _address;
+            //private string _city;
 
 
         }
