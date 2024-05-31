@@ -27,6 +27,19 @@ namespace visualstudio_git
             Console.WriteLine($"Brand: {_brand} , Model: {_model} , Year : {_year} ");
         }
 
+        public string GetModel()
+        {
+            return _model;
+        }
+        public int GetYear()
+        {
+            return _year;
+        }
+
+        public void SetYear(int year)
+        {
+            this._year = year;  
+        }
 
 
     }
