@@ -23,7 +23,7 @@ namespace visualstudio_git
             this._age = age;
             this._email = email;
             this._address = address;
-           this._phoneNo = phoneNo;
+            this._phoneNo = phoneNo;
 
 
         }
@@ -31,7 +31,7 @@ namespace visualstudio_git
 
         public void DisplayInfo()
         {
-            Console.WriteLine($"First Name : {_firstName} and Last Name : {_lastName}");
+            Console.WriteLine($"User Name : {_firstName} {_lastName}");
         }
 
 
@@ -51,6 +51,16 @@ namespace visualstudio_git
 
         }
 
+        public void GetEmployeeInfo()
+        {
+
+            base.DisplayInfo();
+            Console.WriteLine($"Employee Id : {_empId}");
+            Console.WriteLine($"Designation : {_designation}");
+
+
+        }
+
     }
 
 
@@ -65,6 +75,19 @@ namespace visualstudio_git
         {
             this._customerId = custid;           
 
+        }
+
+        public int GetCustId()
+        {
+            return _customerId;
+        }
+        public void GetCustomerInfo()
+        {
+
+            base.DisplayInfo();
+            //Console.WriteLine($"Customer id : {_customerId}");
+                           
+    
         }
 
     }
