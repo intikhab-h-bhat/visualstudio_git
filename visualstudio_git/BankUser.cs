@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace visualstudio_git
 {
-    internal class BankUser
+    public abstract class BankUser
     {
         private string _firstName;
         private string _lastName;
@@ -29,10 +29,8 @@ namespace visualstudio_git
         }
 
 
-        public void DisplayInfo()
-        {
-            Console.WriteLine($"User Name : {_firstName} {_lastName}");
-        }
+        public abstract void DisplayInfo();
+       
 
 
     }
@@ -51,15 +49,13 @@ namespace visualstudio_git
 
         }
 
-        public void GetEmployeeInfo()
+        public override void DisplayInfo()
         {
-
-            base.DisplayInfo();
             Console.WriteLine($"Employee Id : {_empId}");
             Console.WriteLine($"Designation : {_designation}");
-
-
         }
+
+        
 
     }
 
@@ -81,14 +77,14 @@ namespace visualstudio_git
         {
             return _customerId;
         }
-        public void GetCustomerInfo()
-        {
 
-            base.DisplayInfo();
+
+        public override void DisplayInfo()
+        {
             //Console.WriteLine($"Customer id : {_customerId}");
-                           
-    
+          
         }
+      
 
     }
 }
