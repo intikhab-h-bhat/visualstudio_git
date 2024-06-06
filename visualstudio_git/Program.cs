@@ -5,15 +5,15 @@ Console.WriteLine("Welcome to ABC Bank");
 Console.WriteLine("_________________________________________");
 Console.WriteLine("_________________________________________\n");
 
-var selectEmpOrCust = new List<string> { "1", "2" };
-Console.WriteLine(" Enter 1 to insert customer info \n Enter 2 to insert Employee Info ");
+var selectEmpOrCust = new List<string> { "1", "2", "3" };
+Console.WriteLine(" Enter 1 to insert customer info \n Enter 2 to insert Employee Info \n Enter 3 for Transaction");
 string strSelect = Console.ReadLine();
 
 
 
 if (strSelect == "1")
 {
-    Console.WriteLine("Customer Details");
+    Console.WriteLine("Create Customer");
     Console.WriteLine("_________________________________________");
 
     Console.WriteLine("Enter First Name");
@@ -40,14 +40,31 @@ if (strSelect == "1")
     long.TryParse(mobileNo, out longMobileNo);
     int.TryParse(custId, out intCustId);
 
-
+    Console.Clear();
+    Console.WriteLine("Customer Details");
+    Console.WriteLine("_________________________________________");
     var customer1 = new Customer(firstName, lastName, intAge, email, address, longMobileNo, intCustId);
     //var customer1 = new Customer("Intikhab Hussain","Bhat",43,"intikhabh@gmail.com","Nowgam By-Pass Srinagar",8491021591,1);
     customer1.DisplayInfo();
 
+    Console.WriteLine("\n");
+    Console.WriteLine("Create Customer Account");
+    Console.WriteLine("_________________________________________");
+
+    Console.WriteLine("Enter Account No");
+    string actNo= Console.ReadLine();
+    Console.WriteLine("Enter the Account Type");
+    string actType = Console.ReadLine();
+    Console.WriteLine("Enter the Amount to be deposited");
+    string amountDeposted = Console.ReadLine();
+    int intAmountDeposit;
+    int.TryParse(amountDeposted, out intAmountDeposit);
 
 
-    var acountdetails = new Accounts("SB-123", "Saving Account", 5000, customer1.GetCustId());
+    Console.Clear();
+    Console.WriteLine("Customer Account Details");
+    Console.WriteLine("_________________________________________");
+    var acountdetails = new Accounts(actNo, actType, intAmountDeposit, customer1.GetCustId());
 
     acountdetails.GetAccountDetails();
 
@@ -65,12 +82,40 @@ if (strSelect == "1")
 }
 else
 {
-
-
     Console.WriteLine("\n");
+    Console.WriteLine("Create Employee");
+    Console.WriteLine("_________________________________________");
+
+    Console.WriteLine("Enter First Name");
+    string firstName = Console.ReadLine();
+    Console.WriteLine("Enter the last anme");
+    string lastName = Console.ReadLine();
+    Console.WriteLine("Enter the Age");
+    string age = Console.ReadLine();
+    Console.WriteLine("Enter the Email");
+    string email = Console.ReadLine();
+    Console.WriteLine("Enter the Address");
+    string address = Console.ReadLine();
+    Console.WriteLine("Enter the Mobile No");
+    string mobileNo = Console.ReadLine();
+    Console.WriteLine("Enter the Employee Id");
+    string empId = Console.ReadLine();
+    Console.WriteLine("Enter Designation");
+    string designation = Console.ReadLine();
+
+
+    int intAge;
+    long longMobileNo;
+    int intEmpId;
+
+    int.TryParse(age, out intAge);
+    long.TryParse(mobileNo, out longMobileNo);
+    int.TryParse(empId, out intEmpId);
+
+    Console.Clear();
     Console.WriteLine("Employee Details");
     Console.WriteLine("_________________________________________");
-    var empDetails = new Employee("Javaid", "Ahmad", 38, "abc@gmail.com", "Natipora Srinagar", 1234567890, 101, "Accountant");
+    var empDetails = new Employee(firstName, lastName, intAge, email, address, longMobileNo, intEmpId, designation);
 
     empDetails.DisplayInfo();
 

@@ -8,12 +8,12 @@ namespace visualstudio_git
 {
     public abstract class BankUser
     {
-        private string _firstName;
-        private string _lastName;
-        private int _age;
-        private string _email;
-        private string _address;
-        private long _phoneNo;
+        protected string _firstName;
+        protected string _lastName;
+        protected int _age;
+        protected string _email;
+        protected string _address;
+        protected long _phoneNo;
 
 
         public  BankUser(string fname,string lname, int age,string email,string address,long phoneNo)
@@ -52,6 +52,11 @@ namespace visualstudio_git
         public override void DisplayInfo()
         {
             Console.WriteLine($"Employee Id : {_empId}");
+            Console.WriteLine($"Full Name : {_firstName} {_lastName}");
+            Console.WriteLine($"Age : {_age}");
+            Console.WriteLine($"Email : {_email}");
+            Console.WriteLine($"Mobile No : {_phoneNo}");
+            Console.WriteLine($"Address : {_address}");
             Console.WriteLine($"Designation : {_designation}");
         }
 
@@ -69,7 +74,8 @@ namespace visualstudio_git
 
         public Customer(string fname, string lname, int age, string email, string address, long phoneNo, int custid) : base(fname, lname, age, email, address, phoneNo)
         {
-            this._customerId = custid;           
+            this._customerId = custid;
+            
 
         }
 
@@ -81,8 +87,15 @@ namespace visualstudio_git
 
         public override void DisplayInfo()
         {
-            //Console.WriteLine($"Customer id : {_customerId}");
-          
+           
+            Console.WriteLine($"Customer id : {_customerId}");
+            Console.WriteLine($"Customer Full Name : {_firstName} {_lastName}");
+            Console.WriteLine($"Customer Age : {_age}");
+            Console.WriteLine($"Customer Email : {_email}");
+            Console.WriteLine($"Customer Mobile No : {_phoneNo}");
+            Console.WriteLine($"Customer Address : {_address} \n");
+
+
         }
       
 
