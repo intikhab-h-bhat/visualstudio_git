@@ -8,10 +8,14 @@ namespace ClassLibraryBank
         public string lastName { get; set; }
         public int age { get; set; }
         public string address { get; set; }
-        public string mobileNo { get; set; }
+        public int mobileNo { get; set; }
         public string email { get; set; }
 
+
+        string Display();
        
      
     }
+
+    
 }
