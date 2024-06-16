@@ -30,9 +30,26 @@ namespace ClassLibraryBank
             accountNumber = actno;
             balance = balance; 
             custId = custid;
+                        
+        }
 
+        public void Deposit(double amount)
+        {
+            balance += amount;
+            Console.WriteLine($"Deposited {amount:C} to account {accountNumber}. New balance is {balance:C}.");
+        }
 
-            
+        public void Withdraw(double amount)
+        {
+            if (amount <= balance)
+            {
+                balance -= amount;
+                Console.WriteLine($"Withdrew {amount:C} from account {accountNumber}. New balance is {balance:C}.");
+            }
+            else
+            {
+                Console.WriteLine("Insufficient funds.");
+            }
         }
 
         public void Display()

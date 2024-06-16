@@ -14,6 +14,7 @@ EnterChoices();
     var selectChoice = new List<string> { "1", "2", "3" };
     Console.WriteLine(" Enter 1 to insert customer info \n Enter 2 to insert Employee");
     strSelect = Console.ReadLine();
+    Console.Clear();
     CreateInfo();
 }
 
