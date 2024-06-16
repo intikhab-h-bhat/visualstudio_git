@@ -37,7 +37,13 @@ namespace ClassLibraryBank
 
         public void Display()
         {
-            Console.WriteLine($" Full Name: {firstName}  {lastName}");
+            Console.WriteLine($"Customer Id: {custId}");
+            Console.WriteLine($"Account No: {accountNumber}");
+            Console.WriteLine($"Amount Balance: {balance}");
+            Console.WriteLine($"Full Name: {firstName}  {lastName}");
+            Console.WriteLine($"Age: {age}");
+            Console.WriteLine($"Mobile No: {mobileNo}");
+            Console.WriteLine($"Address: {address}");
 
 
         }

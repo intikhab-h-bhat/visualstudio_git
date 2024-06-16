@@ -11,8 +11,6 @@ namespace ClassLibraryBank
         public int mobileNo { get; set; }
         public string email { get; set; }
 
-
-        string Display();
        
      
     }
