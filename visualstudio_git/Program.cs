@@ -14,7 +14,10 @@ EnterChoices();
     var selectChoice = new List<string> { "1", "2", "3" };
     Console.WriteLine(" Enter 1 to insert customer info \n Enter 2 to insert Employee");
     strSelect = Console.ReadLine();
+    CreateInfo();
 }
+
+void CreateInfo() { 
 
 if(strSelect == "1")
 {
@@ -60,6 +63,7 @@ if(strSelect == "1")
     ((Customer)cust).Display();
 
     Console.WriteLine("_________________________________________\n");
+    strSelect = string.Empty;
     EnterChoices();
     
 
@@ -83,7 +87,7 @@ else if (strSelect == "2")
     string email = Console.ReadLine();
     Console.WriteLine("Enter the Designation");  
     string designation = Console.ReadLine();
-    Console.WriteLine("Enter the Customer Id");
+    Console.WriteLine("Enter the Employee Id");
     string empId = Console.ReadLine();
 
 
@@ -106,9 +110,10 @@ else if (strSelect == "2")
     ((Employee)emp).Display();
 
     Console.WriteLine("_________________________________________\n");
+    strSelect = string.Empty;
     EnterChoices();
 
-
+}
 }
 
 
