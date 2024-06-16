@@ -64,6 +64,52 @@ if(strSelect == "1")
     
 
 }
+else if (strSelect == "2")
+{
+    Console.WriteLine("Create Employee");
+    Console.WriteLine("_________________________________________");
+
+    Console.WriteLine("Enter First Name");
+    string firstName = Console.ReadLine();
+    Console.WriteLine("Enter the last anme");
+    string lastName = Console.ReadLine();
+    Console.WriteLine("Enter the Age");
+    string age = Console.ReadLine();
+    Console.WriteLine("Enter the Address");
+    string address = Console.ReadLine();
+    Console.WriteLine("Enter the Mobile No");
+    string mobileNo = Console.ReadLine();
+    Console.WriteLine("Enter the Email");
+    string email = Console.ReadLine();
+    Console.WriteLine("Enter the Designation");  
+    string designation = Console.ReadLine();
+    Console.WriteLine("Enter the Customer Id");
+    string empId = Console.ReadLine();
+
+
+    int intAge;
+    int intMobileNo;
+    int intEmpId;
+   
+
+    int.TryParse(age, out intAge);
+    int.TryParse(mobileNo, out intMobileNo);
+    int.TryParse(empId, out intEmpId);
+   
+
+    Console.Clear();
+    Console.WriteLine("Employee Details");
+    Console.WriteLine("_________________________________________");
+
+    IPerson emp = new Employee(firstName, lastName, intAge, address, intMobileNo, email,designation, intEmpId);
+
+    ((Employee)emp).Display();
+
+    Console.WriteLine("_________________________________________\n");
+    EnterChoices();
+
+
+}
 
 
 
