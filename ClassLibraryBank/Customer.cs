@@ -16,7 +16,7 @@ namespace ClassLibraryBank
         public int mobileNo { get; set; }
         public string email { get; set; }
         public string accountNumber { get; set; }
-        public double balance { get; private set; }
+        public double actbalance { get; private set; }
         public int custId { get; private set; }
         public Customer(string fname,string lname,int age,string address,int mobileno,string email,string actno,double balance,int custid) { 
 
@@ -28,23 +28,23 @@ namespace ClassLibraryBank
             mobileNo = mobileno;
             email = email;
             accountNumber = actno;
-            balance = balance; 
+            actbalance = balance; 
             custId = custid;
                         
         }
 
         public void Deposit(double amount)
         {
-            balance += amount;
-            Console.WriteLine($"Deposited {amount:C} to account {accountNumber}. New balance is {balance:C}.");
+            actbalance += amount;
+            Console.WriteLine($"Deposited {amount:C} to account {accountNumber}. New balance is {actbalance:C}.");
         }
 
         public void Withdraw(double amount)
         {
-            if (amount <= balance)
+            if (amount <= actbalance)
             {
-                balance -= amount;
-                Console.WriteLine($"Withdrew {amount:C} from account {accountNumber}. New balance is {balance:C}.");
+                actbalance -= amount;
+                Console.WriteLine($"Withdrew {amount:C} from account {accountNumber}. New balance is {actbalance:C}.");
             }
             else
             {
@@ -56,7 +56,7 @@ namespace ClassLibraryBank
         {
             Console.WriteLine($"Customer Id: {custId}");
             Console.WriteLine($"Account No: {accountNumber}");
-            Console.WriteLine($"Amount Balance: {balance}");
+            Console.WriteLine($"Amount Balance: {actbalance}");
             Console.WriteLine($"Full Name: {firstName}  {lastName}");
             Console.WriteLine($"Age: {age}");
             Console.WriteLine($"Mobile No: {mobileNo}");
